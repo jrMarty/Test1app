@@ -1,0 +1,12 @@
+<p>login works! {{title}}</p>
+
+<div> Months :
+
+    <select *ngIf = "isAvailable; else condition2">
+        <option *ngFor = "let i of months">{{i}}</option>
+    </select>
+    
+    <ng-template #condition2>
+        <div *ngFor = "let j of months">{{j}}</div>
+    </ng-template>
+</div>
